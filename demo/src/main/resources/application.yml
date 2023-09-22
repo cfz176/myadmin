@@ -1,0 +1,25 @@
+server:
+  port: 8081
+# DataSource Config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/adminvue?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+    username: root
+    password: root
+#  security:
+#    user:
+#      name: user
+#      password: 123456
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+  configuration:
+#     是否将sql打印到控制面板(该配置会将sql语句和查询的结果都打印到控制台)
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+cfz:
+  jwt:
+    header: Authorization
+    expire: 604800 #7天，秒单位
+    secret: jhgddgh5hfdt84fdgh3ht4ft6dtrs8rt
+
